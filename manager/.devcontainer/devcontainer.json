@@ -1,0 +1,7 @@
+{
+    "name": "Arupaka Network Cluster Manager",
+    "dockerFile": "../Dockerfile",
+    "appPort": 3000,
+    "extensions": [
+    ],
+  }
