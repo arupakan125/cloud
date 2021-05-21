@@ -12,4 +12,4 @@ class SwitchSerializer(serializers.ModelSerializer):
 class VlanSerializer(serializers.ModelSerializer):
     class Meta:
         model = Vlan
-        fields = ('id', 'vlan', 'created_at', 'updated_at')
+        fields = ('id', 'vlan', 'switch', 'created_at', 'updated_at')
