@@ -29,10 +29,10 @@ for vxlan in actual_vxlans:
 
 ## 作成処理が必要なVXLANをリストで取得
 needed_vxlan_list = list(set(actual_switch_list) - set(actual_vxlan_list))
-
+needed_vxlan_list.sort()
 ## 破棄が可能なVXLANをリストで取得
 unneeded_vxlan_list = list(set(actual_vxlan_list) - set(actual_switch_list))
-
+unneeded_vxlan_list.sort()
 print("VXLANの作成が必要なセグメントID")
 print(needed_vxlan_list)
 print("VXLANの破棄が可能なセグメントID")
