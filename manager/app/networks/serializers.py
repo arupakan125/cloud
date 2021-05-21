@@ -1,11 +1,11 @@
 from rest_framework import serializers
 
-from .models import Network, Vlan
+from .models import Switch, Vlan
 
 
-class NetworkSerializer(serializers.ModelSerializer):
+class SwitchSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Network
+        model = Switch
         fields = ('id', 'name', 'created_at', 'updated_at')
 
 

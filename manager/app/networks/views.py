@@ -1,12 +1,12 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .models import Network, Vlan
-from .serializers import NetworkSerializer, VlanSerializer
+from .models import Switch, Vlan
+from .serializers import SwitchSerializer, VlanSerializer
 
 # Create your views here.
 class NetworkViewSet(viewsets.ModelViewSet):
-    queryset = Network.objects.all()
-    serializer_class = NetworkSerializer
+    queryset = Switch.objects.all()
+    serializer_class = SwitchSerializer
 
 
 class VlanViewSet(viewsets.ModelViewSet):
