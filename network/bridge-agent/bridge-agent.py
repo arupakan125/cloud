@@ -20,17 +20,16 @@ for switch in actual_switchs:
     switch = switch.replace("acbr-", "")
     actual_switch_list.append(int(switch))
 
-ideal_switch_list.sort()
-actual_switch_list.sort()
-print(ideal_switch_list)
-print(actual_switch_list)
+
 
 needed_switch_list = list(set(ideal_switch_list) - set(actual_switch_list))
 needed_switch_list.sort()
+print("ブリッジの作成が必要なセグメントID")
 print(needed_switch_list)
 
 unneeded_switch_list = list(set(actual_switch_list) - set(ideal_switch_list))
 unneeded_switch_list.sort()
+print("ブリッジの破棄が可能なセグメントID")
 print(unneeded_switch_list)
 
 
