@@ -12,6 +12,6 @@ class Vlan(models.Model):
     name = models.CharField(max_length=64, blank=True, null=True)
     description = models.CharField(max_length=1024, blank=True, null=True)
     vlan = models.IntegerField()
-    switch = models.ForeignKey(Switch, on_delete=models.DO_NOTHING)
+    switch = models.OneToOneField(Switch, on_delete=models.DO_NOTHING)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
